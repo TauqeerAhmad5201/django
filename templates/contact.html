@@ -10,36 +10,30 @@
     <h1 class="text-center">Contact Us</h1>
 
     <!-- adding form -->
-    <form>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <!-- post = where data is not shown -->
+    <form method="post" action="/contact">         
+        <div class="form-group mb-3">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
         </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
+        <div class="form-group mb-3 ">
+            <label for="email">Email ID</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
         </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect2">Example multiple select</label>
-            <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
+        <div class="form-group mb-3">
+            <label for="number">Phone Number </label>
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your phone number">
         </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <div class="form-group mb-3">
+            <label for="desc">Contact purpose</label>
+            <textarea class="form-control"  name="desc" id="desc" rows="3"></textarea>
         </div>
     </form>
+    <div class="container text-center">
+        <button type="submit" class="btn btn-primary my-3 mx-0">Submit</button>
+    </div>
+    
+
 </div>
 
 
