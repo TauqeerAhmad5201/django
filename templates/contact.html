@@ -11,7 +11,8 @@
 
     <!-- adding form -->
     <!-- post = where data is not shown -->
-    <form method="post" action="/contact">         
+    <form method="post" action="/contact">
+        {% csrf_token %} 
         <div class="form-group mb-3">
             <label for="name">Name</label>
             <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
@@ -26,13 +27,14 @@
         </div>
         <div class="form-group mb-3">
             <label for="desc">Contact purpose</label>
-            <textarea class="form-control"  name="desc" id="desc" rows="3"></textarea>
+            <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
+        </div>
+        <div class="container text-center">
+            <button type="submit" class="btn btn-primary my-3 mx-0">Submit</button>
         </div>
     </form>
-    <div class="container text-center">
-        <button type="submit" class="btn btn-primary my-3 mx-0">Submit</button>
-    </div>
     
+
 
 </div>
 
