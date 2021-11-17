@@ -23,6 +23,6 @@ def contact(request):
         email = request.POST.get('email')
         phone = request.POST.get('phone')
         desc = request.POST.get('desc')
-        Contact = contact(name=name, email=email, phone=phone, desc=desc, date=datetime.today() )
+        contact = Contact(name=name, email=email, phone=phone, desc=desc, date=datetime.today() )
         Contact.save()
     return render(request,'contact.html')
