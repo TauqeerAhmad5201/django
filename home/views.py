@@ -27,5 +27,5 @@ def contact(request):
         desc = request.POST.get('desc')
         contact = Contact(name=name, email=email, phone=phone, desc=desc, date=datetime.today() )
         contact.save()
-        messages.success(request, 'Profile details updated.')
+        messages.success(request, 'Your message has been sent.')
     return render(request,'contact.html')
