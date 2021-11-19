@@ -60,11 +60,20 @@
       </div>
     </div>
   </nav>
+  {% comment %} Pop -up Messages alert {% endcomment %}
+
+
+
+  {% if messages %}
+  {% for message in messages %}
   {% comment %} Dismissal alert {% endcomment %}
-  <div class="alert alert-warning alert-dismissible fade show my-0" role="alert">
-    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <div class="alert alert-warning alert-dismissible fade show my-0 {{ message.tags }}" role="alert">
+    {{ message }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
+  {% endfor %}
+  {% endif %}
+
   {% block body %}{% endblock body %}
 
   <!-- Optional JavaScript; choose one of the two! -->
